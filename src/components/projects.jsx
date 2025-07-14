@@ -3,15 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
-import { Barlow } from 'next/font/google'
 import { Doto } from 'next/font/google'
-
-const barlow = Barlow({
-  variable: "--font-barlow",
-  subsets: ["latin"],
-  weight: ["600"],
-
-})
 
 const doto = Doto({
   variable: "--font-doto",

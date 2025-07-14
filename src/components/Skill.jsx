@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { doto } from '@/utlis/font'
 
 const skills = [
   "bash","C", "Docker", "Express.js", "Fabric.js", "Framer Motion", "Git", "GitHub",
@@ -10,6 +11,7 @@ const skills = [
   "TypeScript", "Vercel", "Vite", "Zustand",
 ]
 
+
 export default function Skill() {
   return (
     <section id="tech" className="mt-10">
@@ -17,7 +19,7 @@ export default function Skill() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-block w-full px-6 md:px-8 py-2 md:py-3 bg-white/5 border border-white/10 text-cyan-400 text-lg font-mono rounded-xl mb-6"
+            className={` w-full px-6 md:px-8 py-2 md:py-3 text-3xl  text-white uppercase rounded-xl mb-6 ${doto.className} `}
             >
             Tech Stack
     </motion.h2>

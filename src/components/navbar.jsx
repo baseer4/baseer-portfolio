@@ -26,7 +26,7 @@ export default function Navbar() {
 
         {/* GitHub icon */}
         <a
-          href="https://github.com/baseerx"
+          href="https://github.com/baseer4"
           target="_blank"
           className="hover:text-white text-gray-400"
         >
