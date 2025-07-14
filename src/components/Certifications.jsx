@@ -8,13 +8,13 @@ const certifications = [
     title: 'Google Cloud Essentials',
     issuer: 'Google Cloud Skills Boost',
     date: 'Jun 2025',
-    link: 'https://coursera.org/verify/example-ux-cert',
+    link: 'https://www.cloudskillsboost.google/public_profiles/3ff63be4-3ac0-42c5-8916-004ce087148a/badges/16534575?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share',
   },
   {
     title: 'Docker Essentials: A Developer Introduction',
     issuer: 'IBM',
     date: 'May 2025',
-    link: 'https://coursera.org/verify/example-meta-cert',
+    link: 'https://courses.cognitiveclass.ai/certificates/682b40d981644333a6e7753e382e831d',
   },
 ]
 
