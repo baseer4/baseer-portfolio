@@ -8,7 +8,7 @@ const certifications = [
     title: 'Google Cloud Essentials',
     issuer: 'Google Cloud Skills Boost',
     date: 'Jun 2025',
-    link: 'https://www.cloudskillsboost.google/public_profiles/3ff63be4-3ac0-42c5-8916-004ce087148a/badges/16534575?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share',
+    link: 'https://www.cloudskillsboost.google/public_profiles/3ff63be4-3ac0-42c5-8916-004ce087148a/badges/16534575',
   },
   {
     title: 'Docker Essentials: A Developer Introduction',
