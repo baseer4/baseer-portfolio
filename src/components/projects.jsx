@@ -20,7 +20,7 @@ const projects = [
   {
     name: 'Wrapboard',
     description: 'Collaborative whiteboard built with Fabric.js, Liveblocks, and Next.js.',
-    link: 'https://github.com/baseer4/warpboard',
+    link: 'https://github.com/baseer4/wrapboard',
     tags: ['Next.js', 'Fabric.js', 'Liveblocks', 'React','Typescript'],
   },
   {
