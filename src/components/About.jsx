@@ -13,7 +13,7 @@ export default function About() {
       >
         <h2 className="text-lg font-mono text-cyan-400 mb-3">About Me</h2>
         <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-          Hey, I’m Baseer — a web developer who enjoys crafting minimal, high-performance websites
+          Hey, I’m Baseer, A Software developer who enjoys crafting minimal, high-performance websites
           with a focus on clean design and smooth motion. I love working with modern stacks like
           React, Next.js, and Tailwind CSS to build interfaces that feel polished and intentional.
         </p>

@@ -5,7 +5,7 @@ import { doto } from '@/utlis/font'
 
 const skills = [
   "Bash","C", "Docker", "Express.js", "Fabric.js", "Framer Motion", "Git", "GitHub",
-  "Google Cloud Platform[GCP]", "JavaScript", "Linux", "Liveblocks", "Markdown", "MongoDB", "MySQL",
+  "Google Cloud Platform [GCP]", "JavaScript", "Linux", "Liveblocks", "Markdown", "MongoDB", "MySQL",
   "Next.js", "Node.js", "NumPy", "Pandas", "PostgreSQL", "Prisma", "Python",
   "PyTorch", "React", "REST APIs", "ShadCN UI", "Socket.IO", "Tailwind",
   "TypeScript", "Vercel", "Vite", "Zustand",
