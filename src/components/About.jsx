@@ -13,9 +13,7 @@ export default function About() {
       >
         <h2 className="text-lg font-mono text-cyan-400 mb-3">About Me</h2>
         <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-          Hey, I’m Baseer, A Software developer who enjoys crafting minimal, high-performance websites
-          with a focus on clean design and smooth motion. I love working with modern stacks like
-          React, Next.js, and Tailwind CSS to build interfaces that feel polished and intentional.
+          Hi, I’m Baseer, a full-stack software developer building end-to-end web applications. I design polished, user-friendly interfaces with React, Next.js, and Tailwind CSS, and develop robust backend systems with databases, APIs, and server-side logic to deliver complete, high-performance solutions.
         </p>
       </motion.div>
     </section>

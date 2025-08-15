@@ -16,13 +16,15 @@ export default function Navbar() {
         <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
 
         {/* Resume link */}
-        <Link
-          href="/resume.pdf"
+        <a
+          href="https://drive.google.com/file/d/1VW2VK2GUdCaFwiPr7BEoEHn5nAcWc50C/view?usp=sharing"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-xs text-gray-300 hover:text-white underline"
         >
           Resume
-        </Link>
+        </a>
+
 
         {/* GitHub icon */}
         <a
