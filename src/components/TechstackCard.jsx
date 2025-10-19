@@ -63,16 +63,19 @@ const TechstackCard = () => {
         </div>
 
         {/* Dev Tools & Utilities */}
-        <div className="flex flex-col items-center gap-1 md:hidden">
-          <Terminal size={20} className="text-purple-400" />
-          <p className="text-sm font-medium mt-1">Dev Tools </p>
-          <div className="flex flex-col text-xs text-gray-400 mt-1">
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Bash</span>
-            <span>Linux</span>
-            {/* <span>Markdown</span>
-            <span>Liveblocks</span> */}
+        <div className="md:hidden lg:block">
+
+          <div className="flex flex-col items-center gap-1 ">
+            <Terminal size={20} className="text-purple-400" />
+            <p className="text-sm font-medium mt-1">Dev Tools </p>
+            <div className="flex flex-col text-xs text-gray-400 mt-1">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Bash</span>
+              <span>Linux</span>
+              {/* <span>Markdown</span>
+              <span>Liveblocks</span> */}
+            </div>
           </div>
         </div>
       </div>
