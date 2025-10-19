@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ExternalLink, LayoutGrid, X } from "lucide-react";
+import { ExternalLink, LayoutGrid, X, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
@@ -88,7 +88,7 @@ const ProjectsCard = () => {
       >
         <div className="flex justify-between items-start mb-3">
           <div className="flex items-center gap-2">
-            <span className="text-xl">👨‍🎓</span>
+            <Zap className="h-5 w-5 " />
             <h2 className="text-lg font-semibold flex items-center gap-2">
               ExamGuardAI
               <span className="text-xs border border-white/10 rounded-md px-2 py-[2px] text-white">
@@ -101,7 +101,7 @@ const ProjectsCard = () => {
             hover:text-orange-400 hover:border-orange-500 transition-all duration-200 ease-out"
           >
             <ExternalLink className="h-4 w-4 stroke-[1.5]" />
-            <span>Visit Live Site</span>
+            <span>Live Site</span>
           </button>
         </div>
 
@@ -135,7 +135,6 @@ const ProjectsCard = () => {
         </button>
       </div>
 
-      {/* Modal */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
@@ -170,7 +169,6 @@ const ProjectsCard = () => {
                 </PerfectScrollbar>
               </div>
 
-              {/* Desktop Natural Scroll */}
               <div className="hidden md:block max-h-[70vh] overflow-y-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {projectsData.map((proj) => (
