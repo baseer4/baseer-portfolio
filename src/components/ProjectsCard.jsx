@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
 import { useDragAnimation } from "@/hooks/useDragAnimation";
+import Link from "next/link";
 
 const projectsData = [
   {
@@ -13,25 +14,25 @@ const projectsData = [
     featured: true,
     description:
       "AI-powered exam proctoring system tracking head pose, eye gaze, and exam violations in real-time.",
-    tech: ["React", "Google-mediapipe", "Node", "Express", "MongoDB", "Docker"],
-    liveLink: "#",
+    tech: ["React", "Google-mediapipe", "Node", "Express", "MongoDB","Zustand", "Docker"],
+    liveLink: "https://github.com/baseer4/examguardai",
   },
   {
-    title: "Project 1",
-    description: "Short description for Project 1.",
-    tech: ["React", "Node", "Express"],
-    liveLink: "#",
+    title: "Wrapboard",
+    description: "Collaborative whiteboard built with Fabric.js, Liveblocks, and Next.js.",
+    tech: ['Next.js', "typscript", 'Fabric.js', 'Liveblocks', 'React','Typescript'],
+    liveLink: "https://github.com/baseer4/wrapboard",
   },
   {
-    title: "Project 2",
-    description: "Short description for Project 2.",
-    tech: ["Next.js", "MongoDB", "Tailwind"],
-    liveLink: "#",
+    title: "Convofi",
+    description: 'Real-time MERN chat app using Socket.IO with modern UI and group messaging.',
+    tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Socket.IO'],
+    liveLink: "https://github.com/baseer4/convofi",
   },
   {
-    title: "Project 3",
-    description: "Short description for Project 3.",
-    tech: ["Python", "Flask", "PostgreSQL"],
+    title: "QuickDrive",
+    description: "QuickDrive is a full-stack cloud storage app inspired by Google Drive and Dropbox, featuring real-time file uploads, secure sharing, and responsive design.",
+    tech: ['Typescript', 'Express.js', 'React', 'Node.js', 'Socket.IO'],
     liveLink: "#",
   },
 ];
@@ -47,17 +48,16 @@ const ProjectCard = ({ proj }) => (
           </span>
         )}
       </h4>
-
-      <a
+        
+      <Link
         href={proj.liveLink}
         target="_blank"
-        rel="noreferrer"
         className="flex items-center gap-2 px-2 py-1 rounded-md border border-neutral-700 text-gray-300 text-xs
         hover:text-orange-400 hover:border-orange-500 transition-all duration-200 ease-out"
       >
         <ExternalLink className="h-4 w-4 stroke-[1.5]" />
-        <span>Visit</span>
-      </a>
+        <span>Github</span>
+      </Link>
     </div>
 
     <p className="text-sm text-white/70 leading-relaxed mb-3">{proj.description}</p>
@@ -97,12 +97,17 @@ const ProjectsCard = () => {
             </h2>
           </div>
 
-          <button className="flex items-center gap-2 px-3 py-1 rounded-md border border-neutral-700 text-gray-300 text-sm
-            hover:text-orange-400 hover:border-orange-500 transition-all duration-200 ease-out"
+          <a
+            href="https://examguard-ai.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 px-3 py-1 rounded-md border border-neutral-700 text-gray-300 text-sm
+              hover:text-orange-400 hover:border-orange-500 transition-all duration-200 ease-out"
           >
             <ExternalLink className="h-4 w-4 stroke-[1.5]" />
             <span>Live Site</span>
-          </button>
+          </a>
+
         </div>
 
         <p className="text-sm text-white mb-8">AI-powered Exam Proctoring System</p>

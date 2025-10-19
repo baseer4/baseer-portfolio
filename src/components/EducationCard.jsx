@@ -26,13 +26,15 @@ const EducationCard = () => {
         <p className="text-gray-400 text-xs mt-2 text-center sm:block md:hidden lg:block">
           Nawab Shah Alam Khan College of Engineering and Technology
         </p>
-        <p className="text-gray-400 text-xs lg:mt-2 text-center sm:hidden md:block lg:hidden sm:mt-4">
+        <p className="hidden md:block lg:hidden text-gray-400 text-xs lg:mt-2 text-center">
           NSAKCET
         </p>
-        <div className="flex items-center gap-1 lg:mt-2 text-gray-400 text-xs sm:mt-4">
-          <Calendar className="h-3.5 w-3.5" />
-          <span>@ 2025</span>
-        </div>
+
+      <div className="flex items-center gap-1 text-gray-400 text-xs sm:mt-4 lg:mt-2">
+        <Calendar className="h-3.5 w-3.5" />
+        <span>@ 2025</span>
+      </div>
+
       </div>
     </div>
   );

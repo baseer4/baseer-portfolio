@@ -18,7 +18,7 @@ const TechstackCard = () => {
        
       </div>
 
-      <div className="flex gap-4 px-2 mt-6 text-center">
+      <div className="flex justify-center flex-wrap gap-4 px-2 mt-4 text-center">
         {/* Frontend & UI */}
         <div className="flex flex-col items-center gap-1">
           <Code2 size={20} className="text-orange-400" />
@@ -77,9 +77,9 @@ const TechstackCard = () => {
         </div>
       </div>
 
-      <p className="text-gray-500 text-xs mt-6 text-center">
+      {/* <p className="text-gray-500 text-xs mt-6 text-center">
         Constantly learning and exploring new tools.
-      </p>
+      </p> */}
     </div>
   );
 };
