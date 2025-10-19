@@ -105,7 +105,8 @@ const ProjectsCard = () => {
               hover:text-orange-400 hover:border-orange-500 transition-all duration-200 ease-out"
           >
             <ExternalLink className="h-4 w-4 stroke-[1.5]" />
-            <span>Live Site</span>
+            <span className="hidden md:block">Live Site</span>
+            <span className="sm:block md:hidden">Live</span>
           </a>
 
         </div>

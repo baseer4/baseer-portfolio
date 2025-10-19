@@ -45,7 +45,7 @@ const CertificationCard = () => {
           {certifications.map((cert, idx) => (
             <li
               key={idx}
-              className="flex items-start justify-between gap-3 p-3 rounded-md bg-white/5 hover:bg-gray-700 hover:scale-105 transition-all"
+              className="flex items-start justify-between gap-3 p-3 rounded-md bg-white/5 hover:bg-gray-700 transition-all"
             >
               <div className="flex items-start gap-3">
                 {cert.icon}
@@ -68,7 +68,6 @@ const CertificationCard = () => {
           ))}
         </ul>
 
-        <div className="pointer-events-none absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-[#0b0b0b] to-transparent" />
       </div>
 
       <style jsx>{`
