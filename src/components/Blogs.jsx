@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { doto } from '@/utlis/font'
+import { doto } from '../utlis/font'
 
 const blogs = [
   {

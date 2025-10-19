@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { FaGithub } from 'react-icons/fa'
 import { Doto } from 'next/font/google'
 
 const doto = Doto({
