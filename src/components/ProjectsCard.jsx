@@ -1,41 +1,41 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
-import { ExternalLink, LayoutGrid, X, Zap } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import PerfectScrollbar from "react-perfect-scrollbar";
-import "react-perfect-scrollbar/dist/css/styles.css";
-import { useDragAnimation } from "@/hooks/useDragAnimation";
-import Link from "next/link";
+import React, { useState, useEffect } from "react"
+import { ExternalLink, LayoutGrid, X, Zap } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import PerfectScrollbar from "react-perfect-scrollbar"
+import "react-perfect-scrollbar/dist/css/styles.css"
+import { useDragAnimation } from "@/hooks/useDragAnimation"
+import Link from "next/link"
 
 const projectsData = [
   {
     title: "ExamGuardAI",
     featured: true,
-    description:
-      "AI-powered exam proctoring system tracking head pose, eye gaze, and exam violations in real-time.",
-    tech: ["React", "Google-mediapipe", "Node", "Express", "MongoDB","Zustand", "Docker"],
+    description: "AI-powered exam proctoring system tracking head pose, eye gaze, and exam violations in real-time.",
+    tech: ["React", "Google-mediapipe", "Node", "Express", "MongoDB", "Zustand", "Docker"],
     liveLink: "https://github.com/baseer4/examguardai",
   },
   {
     title: "Wrapboard",
     description: "Collaborative whiteboard built with Fabric.js, Liveblocks, and Next.js.",
-    tech: ['Next.js', "typscript", 'Fabric.js', 'Liveblocks', 'React','Typescript'],
+    tech: ["Next.js", "TypeScript", "Fabric.js", "Liveblocks", "React"],
     liveLink: "https://github.com/baseer4/wrapboard",
   },
   {
     title: "Convofi",
-    description: 'Real-time MERN chat app using Socket.IO with modern UI and group messaging.',
-    tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Socket.IO'],
+    description: "Real-time MERN chat app using Socket.IO with modern UI and group messaging.",
+    tech: ["MongoDB", "Express.js", "React", "Node.js", "Socket.IO"],
     liveLink: "https://github.com/baseer4/convofi",
   },
   {
     title: "QuickDrive",
-    description: "QuickDrive is a full-stack cloud storage app inspired by Google Drive and Dropbox, featuring real-time file uploads, secure sharing, and responsive design.",
-    tech: ['Typescript', 'Express.js', 'React', 'Node.js', 'Socket.IO'],
+    description:
+      "Full-stack cloud storage app inspired by Google Drive and Dropbox, featuring real-time uploads, secure sharing, and responsive design.",
+    tech: ["TypeScript", "Express.js", "React", "Node.js", "Socket.IO"],
     liveLink: "#",
   },
-];
+]
 
 const ProjectCard = ({ proj }) => (
   <div className="rounded-2xl border border-white/10 bg-[#0b0b0b] shadow-sm p-4 text-white hover:border-white/50 transition-colors select-none">
@@ -48,7 +48,7 @@ const ProjectCard = ({ proj }) => (
           </span>
         )}
       </h4>
-        
+
       <Link
         href={proj.liveLink}
         target="_blank"
@@ -73,22 +73,29 @@ const ProjectCard = ({ proj }) => (
       ))}
     </div>
   </div>
-);
+)
 
 const ProjectsCard = () => {
-  const dragProps = useDragAnimation();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const dragProps = useDragAnimation()
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    document.body.style.overflow = isModalOpen ? "hidden" : ""
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [isModalOpen])
 
   return (
     <div className="mt-12 gap-6 relative">
-      {/* Featured Card */}
       <div
         {...dragProps}
         className="rounded-2xl border border-white/10 bg-[#0b0b0b] shadow-sm p-4 text-white hover:border-white/50 hover:scale-100 transition-colors select-none"
       >
         <div className="flex justify-between items-start mb-3">
           <div className="flex items-center gap-2">
-            <Zap className="h-5 w-5 " />
+            <Zap className="h-5 w-5" />
             <h2 className="text-lg font-semibold flex items-center gap-2">
               ExamGuardAI
               <span className="text-xs border border-white/10 rounded-md px-2 py-[2px] text-white">
@@ -108,15 +115,13 @@ const ProjectsCard = () => {
             <span className="hidden md:block">Live Site</span>
             <span className="sm:block md:hidden">Live</span>
           </a>
-
         </div>
 
         <p className="text-sm text-white mb-8">AI-powered Exam Proctoring System</p>
 
         <p className="text-sm text-white/70 leading-relaxed mb-5">
-          ExamGuardAI is an AI-powered exam proctoring system that tracks head
-          pose, eye gaze, and exam violations in real-time to ensure a secure
-          testing environment.
+          ExamGuardAI is an AI-powered exam proctoring system that tracks head pose, eye gaze,
+          and exam violations in real-time to ensure a secure testing environment.
         </p>
 
         <div className="flex flex-wrap gap-2 mb-5">
@@ -141,6 +146,7 @@ const ProjectsCard = () => {
         </button>
       </div>
 
+      {/* Modal */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
@@ -165,29 +171,29 @@ const ProjectsCard = () => {
 
               <h3 className="text-2xl font-semibold mb-6 text-center">All Projects</h3>
 
-              <div className="block md:hidden max-h-[70vh]">
+              <div className="block md:hidden max-h-[70vh] overflow-y-auto pr-1">
+                <div className="grid grid-cols-1 gap-6">
+                  {projectsData.map((proj) => (
+                    <ProjectCard key={proj.title} proj={proj} />
+                  ))}
+                </div>
+              </div>
+
+              <div className="hidden md:block max-h-[70vh]">
                 <PerfectScrollbar options={{ suppressScrollX: true }}>
-                  <div className="grid grid-cols-1 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {projectsData.map((proj) => (
                       <ProjectCard key={proj.title} proj={proj} />
                     ))}
                   </div>
                 </PerfectScrollbar>
               </div>
-
-              <div className="hidden md:block max-h-[70vh] overflow-y-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {projectsData.map((proj) => (
-                    <ProjectCard key={proj.title} proj={proj} />
-                  ))}
-                </div>
-              </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectsCard;
+export default ProjectsCard
