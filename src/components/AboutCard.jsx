@@ -9,19 +9,14 @@ const AboutCard = () => {
   return (
     <div
       {...dragProps}
-      className="min-h-60 rounded-2xl border border-white/10 bg-[#0b0b0b] shadow-sm p-6 text-white hover:border-white/50 transition-colors select-none mt-12"
+      className="flex-1 flex flex-col rounded-2xl border border-white/10 bg-[#0b0b0b] shadow-sm p-6 text-white hover:border-white/50 transition-colors md:mt-12 select-none overflow-hidden"
     >
       <h2 className="text-lg font-semibold text-orange-400 mb-4 text-left">
         About Me
       </h2>
 
-      <p className=" text-gray-300 text-left leading-relaxed mb-4">
-        I’m a Computer Science student who loves building things that mix AI and
-        full-stack development. My focus is on turning complex problems into
-        simple, efficient solutions — whether that’s through machine learning
-        models, interactive web apps, or backend systems that just work. I enjoy
-        experimenting, learning new tools, and pushing my projects a little
-        further every time.
+      <p className="text-gray-300 text-left leading-relaxed text-sm md:text-base ">
+       I’m a Computer Science student with a passion for AI and full-stack development. I love building web applications and intelligent systems that simplify complex problems. Exploring new tools and technologies excites me, and I enjoy pushing my projects further with every iteration. My focus is on creating solutions that are both functional and thoughtfully designed.
       </p>
     </div>
   );

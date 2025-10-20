@@ -63,7 +63,7 @@ const TechstackCard = () => {
         </div>
 
         {/* Dev Tools & Utilities */}
-        <div className="md:hidden lg:block">
+        <div className="block md:hidden lg:block">
 
           <div className="flex flex-col items-center gap-1 ">
             <Terminal size={20} className="text-purple-400" />

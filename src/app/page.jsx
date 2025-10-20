@@ -20,10 +20,10 @@ export default function Hero() {
   return (
     <div>
       <HomeIntro />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 items-stretch">
         {/* Top row */}
         <motion.div
-          className="sm:col-span-1 lg:col-span-3"
+          className="sm:col-span-1 lg:col-span-3 min-h-0 flex flex-col"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -32,7 +32,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="sm:col-span-1 lg:col-span-3"
+          className="sm:col-span-1 lg:col-span-3 min-h-0 flex flex-col"
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}

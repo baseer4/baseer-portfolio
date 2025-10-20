@@ -88,10 +88,10 @@ const ProjectsCard = () => {
   }, [isModalOpen])
 
   return (
-    <div className="mt-12 gap-6 relative">
+    <div className="gap-6 relative">
       <div
         {...dragProps}
-        className="rounded-2xl border border-white/10 bg-[#0b0b0b] shadow-sm p-4 text-white hover:border-white/50 hover:scale-100 transition-colors select-none"
+        className="flex-1 flex flex-col justify-start mt-12 rounded-2xl border border-white/10 bg-[#0b0b0b] shadow-sm p-4 text-white hover:border-white/50 hover:scale-100 transition-colors select-none"
       >
         <div className="flex justify-between items-start mb-3">
           <div className="flex items-center gap-2">
@@ -117,7 +117,7 @@ const ProjectsCard = () => {
           </a>
         </div>
 
-        <p className="text-sm text-white mb-8">AI-powered Exam Proctoring System</p>
+  <p className="text-sm text-white mb-8">AI-powered Exam Proctoring System</p>
 
         <p className="text-sm text-white/70 leading-relaxed mb-5">
           ExamGuardAI is an AI-powered exam proctoring system that tracks head pose, eye gaze,
@@ -137,7 +137,7 @@ const ProjectsCard = () => {
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium
+          className="mt-auto w-full flex items-center justify-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium
             bg-gradient-to-r from-orange-500/80 to-yellow-400/70 text-black shadow-md
             hover:scale-[1.02] hover:shadow-orange-400/30 transition-all duration-200 ease-out"
         >
