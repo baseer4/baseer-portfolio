@@ -25,7 +25,7 @@ const BlogsCard = () => {
 
         <div className="flex flex-col items-center gap-3 mt-2">
           <a
-            href="https://medium.com/@yourusername"
+            href="https://medium.com/@sybaseer4"
             target="_blank"
             rel="noopener noreferrer"
             className="flex font-semibold items-center gap-2 px-3 py-1.5 rounded-md border border-neutral-800 text-gray-300 text-sm
