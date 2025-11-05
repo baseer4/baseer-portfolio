@@ -19,7 +19,7 @@ export default function Navbar() {
 
         {/* Resume link */}
         <a
-          href="https://drive.google.com/file/d/1VW2VK2GUdCaFwiPr7BEoEHn5nAcWc50C/view?usp=sharing"
+          href="https://drive.google.com/file/d/1C2UeB9yO1ekiWTl5XoEl5XtF2TTBkA9f/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs text-gray-300 hover:text-white underline"
